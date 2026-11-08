@@ -1,0 +1,7 @@
+sampleRate = float(input("Enter Sample Rate (in Hz): "))
+bufferSize = float(input("Enter Buffer Size: "))
+trackLength = float(input("Enter track length (in seconds): "))
+sampleTotal = int(sampleRate*trackLength)
+buffers = int(sampleTotal//bufferSize)
+samplesLeft = int(sampleTotal%bufferSize)
+print("Processed " + str(buffers) + " full buffers with " + str(samplesLeft) + " leftover samples")
